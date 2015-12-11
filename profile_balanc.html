@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>test</title>
+		<!-- <link rel="icon" href="img/favicon.png" type="image/x-icon" /> -->
+		<link href="js/vendors/slick/slick.css" rel="stylesheet">
+		<link href="js/vendors/scrollercontent/jquery.mThumbnailScroller.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/vendors/slick/slick.min.js"></script>
+		<script src="js/vendors/spin/spin.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.mixitup.js"></script>
+		<script src="js/vendors/scrollercontent/jquery.mThumbnailScroller.js"></script>
+		<script src="js/jquery.mousewheel.js"></script>
+		<script src="js/jquery.selectik.min.js"></script>
+		<script src="js/interface.js"></script>
+	</head>
+	<body>
+		<!--LAYOUT-->
+		<div class="layout">
+			<div class="top">
+				<div class="container">
+					<ul class="fleft">
+						<li class="top-menu__item"><a href="#enter-popup" class="top__anchor popup_open" rel="#enter-popup"><span>Войти</span></a></li>
+						<li class="top-menu__item"><a href="#" class="separator top__anchor"><span>Через соцсеть</span></a></li>
+						<li class="top-menu__item"><a href="#">Регистрация</a></li>
+					</ul>
+
+					<ul class="fright">
+						<li class="top-menu__item"><a href="#" class="separator">Как получить выигрыш</a></li>
+						<li class="top-menu__item"><a href="#">Помощь</a></li>
+					</ul>
+					<div class="top__center">
+						<span class="top__phone">+7 499 90-123-45</span>
+						<a href="#">Информационная поддержка</a>
+						<a href="#" class="bell"><span>28</span></a>
+					</div>
+				</div>
+			</div>
+			<header class="page-header">
+				<div class="container">
+					<div class="top-logo">
+						<img src="img/content/top-logo.png" alt="">
+					</div>
+					<div class="jackpot">
+						174 540 214 &#8381;
+						<span class="jackpot__title"><i>Джекпот</i></span>
+					</div>
+					<nav class="top-nav">
+						<a href="#" class="top-nav__item top-nav__item--submenu"><span>Игры</span></a>
+						<a href="#" class="top-nav__item"><span>Бонусы</span></a>
+						<a href="#" class="top-nav__item"><span>Как играть</span></a>
+						<a href="#" class="top-nav__item"><span>Розыгрыши</span></a>
+						<a href="#" class="top-nav__item"><span>Новости</span></a>
+					</nav>
+					<div class="top-nav__submenu">
+						<div class="top-nav__submenu-list">
+							<div class="top-nav__submenu-list__item">
+								<div class="top-nav__submenu-list__item-title">Тиражные лотереи</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game1.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game2.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game3.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game4.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game5.jpg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="top-nav__submenu-list__item">
+								<div class="top-nav__submenu-list__item-title">Бинго</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game6.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game7.jpg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="top-nav__submenu-list__item">
+								<div class="top-nav__submenu-list__item-title">Бонусные</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game8.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game9.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game10.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game11.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game12.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="top-nav__submenu-list__item">
+								<div class="top-nav__submenu-list__item-title">Живые дилеры</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game2.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game3.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game4.jpg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="top-nav__submenu-list__item">
+								<div class="top-nav__submenu-list__item-title">Все по 100</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game5.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game6.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game7.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game8.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game9.jpg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="top-nav__submenu-list__item">
+								<div class="top-nav__submenu-list__item-title">Быстрые игры</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game10.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game11.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game12.jpg" alt="">
+									</a>
+								</div>
+								<div class="top-nav__submenu-list__item-link">
+									<a href="#">
+										<img src="img/submenu-games/game1.jpg" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</header>
+			
+			<section class="wr">
+				<div class="inner-header">История покупок квитанций</div>
+				<div class="crubs"><a href="">Главная</a> / <a href="">Личный кабинет</a> / <span>Баланс</span></div>
+			</section>
+			<section class="profile">
+				<div class="profile-left">
+					<ul class="profile-menu">
+						<li><a href=""><span class="ico-prof-1"></span>История покупок</a></li>
+						<li><a href=""><span class="ico-prof-2"></span>Профиль</a></li>
+						<li><a href=""><span class="ico-prof-3"></span>Пригласить друга</a></li>
+						<li><a href=""><span class="ico-prof-4"></span>Мои друзья</a></li>
+						<li><a href=""><span class="ico-prof-5"></span>Промокоды</a></li>
+						<li><a href=""><span class="ico-prof-6"></span>Мои числа</a></li>
+						<li class="active"><a href=""><span class="ico-prof-7"></span>Баланс</a></li>
+					</ul>
+				</div>
+				<div class="profile-right profile-balance">
+					<div class="balance-ava"><img src="img/ava1.jpg" alt=""></div>
+					<div class="balance-total">
+						Ваш баланс: &#160; <strong>24 375</strong>.00 руб. <em><img src="img/slash.png" alt=""></em> <span>Бонусов: 300 000</span> <a href=""><img src="img/ico-help.png" class="ico-help" alt=""></a>
+						<div class="balance-btn">
+							<ul>
+								<li class="balance-add"><a href="#tab-balance-1">Пополнить</a></li><li class="balance-withdraw"><a href="#tab-balance-2">Вывести</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="balance-content">
+						<div id="tab-balance-1" class="tab-balance">
+							<div class="balance-form">
+								<div class="balance-form-head">
+									<a href="" class="balance-form-close"></a>
+									<ul class="balance-bank">
+										<li><a href="#history-1"><img src="img/master.png" alt=""></a></li><!--
+										--><li><a href="#history-2"><img src="img/visa.png" alt=""></a></li><!--
+										--><li><a href="#history-3"><img src="img/qivi.png" alt=""></a></li><!--
+										--><li><a href="#history-4"><img src="img/wm.png" alt=""></a></li><!--
+										--><li><a href="#history-5"><img src="img/ya.png" alt=""></a></li>
+									</ul>
+								</div>
+							</div>
+							<div id="history-1" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт MasterCard</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="history-2" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт VISA</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="history-3" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт QIWI</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="history-4" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт WebMoney</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="history-5" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт Яедекс Деньги</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+						<div id="tab-balance-2" class="tab-balance">
+							<div class="balance-form">
+								<div class="balance-form-head">
+									<a href="" class="balance-form-close"></a>
+									<ul class="balance-bank">
+										<li><a href="#history-11"><img src="img/master.png" alt=""></a></li><!--
+										--><li><a href="#history-12"><img src="img/visa.png" alt=""></a></li><!--
+										--><li><a href="#history-13"><img src="img/qivi.png" alt=""></a></li><!--
+										--><li><a href="#history-14"><img src="img/wm.png" alt=""></a></li><!--
+										--><li><a href="#history-15"><img src="img/ya.png" alt=""></a></li>
+									</ul>
+								</div>
+							</div>
+							<div id="history-11" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт MasterCard</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="history-12" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт VISA</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="history-13" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт QIWI</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="history-14" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт WebMoney</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="history-15" class="balance-form-tab">
+								<div class="balance-form-in">
+									<div class="balance-form-inp">
+										<div class="bal-form-header"><i>1.</i> Введите аккаунт Яедекс Деньги</div>
+										<div class="bal-form-input"><input type="text"></div>
+
+										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+
+										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
+											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
+										</div>
+										<div class="bal-form-input"><input type="text" class="form-code"><a href="" class="lnk-code">Получить код</a></div>
+										<div class="bal-form-btn"><button class="btn-st btn-red">Пополнить баланс</button></div>
+									</div>
+									<div class="balance-form-table">
+										<table>
+											<tr>
+												<td class="first">Неограниченный лимит переводов
+													<div class="table-check"><img src="img/table-check.png" alt=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>Минимальная операция 100 руб., <br>
+												максимальная — 14 999 руб.</td>
+											</tr>
+											<tr>
+												<td>Код будет отправлен на номер, <br>
+												указанный при регистрации</td>
+											</tr>
+										</table>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="balance-history">
+							<div class="h2">История операций</div>
+							<table class="history-table">
+								<tr>
+									<th>Дата</th>
+									<th>Система</th>
+									<th>Операция</th>
+									<th>Пополнение</th>
+									<th>Снятие</th>
+									<th class="last">Статус</th>
+								</tr>
+								<tr>
+									<td class="first">10 сен 2015 в 11:20</td>
+									<td><img src="img/h-ya.png" alt=""></td>
+									<td>Пополнение из Яндекс.Кошелек <br>
+									<span>Отправитель 325478921457</span></td>
+									<td>10 000 руб.</td>
+									<td></td>
+									<td class="last">Успешно</td>
+								</tr>
+								<tr>
+									<td class="first">10 сен 2015 в 11:20</td>
+									<td><img src="img/h-visa.png" alt=""></td>
+									<td>Вывод средств на Qiwi Кошелек <br>
+									<span>Отправитель 325478921457</span></td>
+									<td></td>
+									<td><span class="color-red">−5000 руб.</span></td>
+									<td class="last"><span class="color-red">Отказано</span></td>
+								</tr>
+								<tr>
+									<td class="first">10 сен 2015 в 11:20</td>
+									<td><img src="img/h-visa.png" alt=""></td>
+									<td>Вывод средств на Qiwi Кошелек <br>
+									<span>Отправитель 325478921457</span></td>
+									<td></td>
+									<td>−1000 руб.</td>
+									<td class="last">Успешно</td>
+								</tr>
+								<tr>
+									<td class="first">10 сен 2015 в 11:20</td>
+									<td><img src="img/h-visa.png" alt=""></td>
+									<td>Вывод средств на Qiwi Кошелек <br>
+									<span>Отправитель 325478921457</span></td>
+									<td></td>
+									<td>−1000 000 руб.</td>
+									<td class="last">Успешно</td>
+								</tr>
+								<tr>
+									<td class="first">10 сен 2015 в 11:20</td>
+									<td><img src="img/h-wm.png" alt=""></td>
+									<td>Пополнение из Visa/MasterCard <br>
+									<span>Отправитель 325478921457</span></td>
+									<td>500 890 руб.</td>
+									<td></td>
+									<td class="last">Успешно</td>
+								</tr>
+								<tr>
+									<td class="first">10 сен 2015 в 11:20</td>
+									<td><img src="img/h-wm.png" alt=""></td>
+									<td>Пополнение из Visa/MasterCard <br>
+									<span>Отправитель 325478921457</span></td>
+									<td>500 890 руб.</td>
+									<td></td>
+									<td class="last">Успешно</td>
+								</tr>
+								<tr>
+									<td class="first">10 сен 2015 в 11:20</td>
+									<td><img src="img/h-ya.png" alt=""></td>
+									<td>Пополнение из Яндекс.Кошелек <br>
+									<span>Отправитель 325478921457</span></td>
+									<td>10 000 руб.</td>
+									<td></td>
+									<td class="last">Успешно</td>
+								</tr>
+								<tr>
+									<td class="first">10 сен 2015 в 11:20</td>
+									<td><img src="img/h-visa.png" alt=""></td>
+									<td>Вывод средств на Qiwi Кошелек <br>
+									<span>Отправитель 325478921457</span></td>
+									<td></td>
+									<td><span class="color-red">−5000 руб.</span></td>
+									<td class="last"><span class="color-red">Отказано</span></td>
+								</tr>
+							</table>
+							<div class="add-hostory"><a href="">Показать больше истории</a></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="clearfix"></div>
+			</section>
+
+			<section class="page-footer">
+				<div class="container">
+					<div class="row">
+						<div class="page-footer__list-wrap">
+							<div class="page-footer__list col-xs-3">
+								<ul>
+									<li class="page-footer__list-item page-footer__list-item--title">Пользователю</li>
+									<li class="page-footer__list-item"><a href="#">Кошелек</a></li>
+									<li class="page-footer__list-item"><a href="#">Корзина</a></li>
+									<li class="page-footer__list-item"><a href="#">Купленные квитанции</a></li>
+									<li class="page-footer__list-item"><a href="#">Мой профиль</a></li>
+									<li class="page-footer__list-item"><a href="#">Пригласить друга</a></li>
+								</ul>
+							</div>
+							<div class="page-footer__list col-xs-3">
+								<ul>
+									<li class="page-footer__list-item page-footer__list-item--title">Наши игры</li>
+									<li class="page-footer__list-item"><a href="#">Числовые</a></li>
+									<li class="page-footer__list-item"><a href="#">Бинго</a></li>
+									<li class="page-footer__list-item"><a href="#">Моментальные</a></li>
+									<li class="page-footer__list-item"><a href="#">Быстрые игры</a></li>
+								</ul>
+							</div>
+							<div class="page-footer__list col-xs-3">
+								<ul>
+									<li class="page-footer__list-item page-footer__list-item--title">Компания</li>
+									<li class="page-footer__list-item"><a href="#">О компании</a></li>
+									<li class="page-footer__list-item"><a href="#">Спонсорство</a></li>
+									<li class="page-footer__list-item"><a href="#">Где купить билет</a></li>
+									<li class="page-footer__list-item"><a href="#">Как получить выигрыш</a></li>
+									<li class="page-footer__list-item"><a href="#">Пресс-центр</a></li>
+									<li class="page-footer__list-item"><a href="#">Станьте партнером</a></li>
+								</ul>
+							</div>
+							<div class="page-footer__list col-xs-3">
+								<ul>
+									<li class="page-footer__list-item page-footer__list-item--title">Помощь</li>
+									<li class="page-footer__list-item"><a href="#">Как получить выигрыш</a></li>
+									<li class="page-footer__list-item"><a href="#">Пункты продажи билетов</a></li>
+									<li class="page-footer__list-item"><a href="#">Служба поддержки</a></li>
+									<li class="page-footer__list-item"><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-footer__copyright">
+							<div class="page-footer__copyright-item page-footer__copyright-item--long col-xs-6">
+								<div class="title">&copy; 2015 Lottery Online. Лотереи для всей семьи</div>
+								<div class="page-footer__nav">
+									<a href="#">Игры</a>
+									<a href="#">Бонусы</a>
+									<a href="#">Как играть</a>
+									<a href="#">Розыгрыши</a>
+									<a href="#">Как получить выигрыш</a>
+									<a href="#">Новости</a>
+								</div>
+							</div>
+							<div class="page-footer__copyright-item col-xs-3">
+								<div class="title">Мы в соцсетях</div>
+								<div class="page-footer__socials">
+									<a href="#" class="page-footer__socials-item vk"></a>
+									<a href="#" class="page-footer__socials-item ok"></a>
+									<a href="#" class="page-footer__socials-item facebook"></a>
+									<a href="#" class="page-footer__socials-item twitter"></a>
+								</div>
+							</div>
+							<div class="page-footer__copyright-item col-xs-3">
+								<div class="develop">
+									Дизайн сайта <a href="http://nineseven.ru/" target="blank" class="nineseven">Nineseven</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- END LAYOUT-->		
+		
+		<!-- POPUP -->
+		<div id="enter-popup" class="popup">
+			<a href="" class="close"></a>
+			<div class="popup-header">Авторизация</div>
+			<div class="popup-soc">
+				<p><span>Войти через</span></p>
+				<ul class="soc">
+					<li><a href="" class="vk"></a></li>
+					<li><a href="" class="mail"></a></li>
+					<li><a href="" class="ya"></a></li>
+					<li><a href="" class="fb"></a></li>
+					<li><a href="" class="gplus"></a></li>
+				</ul>
+			</div>
+			<div class="popup-form">
+				<div class="popup-form-c">
+					<div class="form-header">Эл. почта, телефон или ID</div>
+					<div class="form-cont"><input type="text"></div>
+					<div class="form-header">Пароль</div>
+					<div class="form-cont">
+						<input type="password" class="inp-pass">
+						<input type="text" class="inp-pass-txt">
+						<a href="" class="pass-btn"></a>
+						<div class="pass-help"><a href="">Забыли пароль?</a></div>
+					</div>
+					<div class="form-btn"><a href="" class="btn-st btn-red">Войти на сайт</a></div>
+				</div>
+				<div class="form-footer">Впервые на сайте? <a href="" class="popup_open" rel="#register-popup">Зарегистрироваться</a></div>
+			</div>
+		</div>
+
+		<div id="register-popup" class="popup">
+			<a href="" class="close"></a>
+			<div class="popup-header">Регистрация</div>
+			<div class="popup-soc">
+				<p><span>Быстрация регистрация через соц.сети</span></p>
+				<ul class="soc">
+					<li><a href="" class="vk"></a></li>
+					<li><a href="" class="mail"></a></li>
+					<li><a href="" class="ya"></a></li>
+					<li><a href="" class="fb"></a></li>
+					<li><a href="" class="gplus"></a></li>
+				</ul>
+			</div>
+			<div class="popup-form">
+				<div class="popup-form-c">
+					<div class="form-header">Эл. почта</div>
+					<div class="form-cont"><input type="text"><span class="form-ico"><img src="img/ico-mail.gif" alt=""></span></div>
+					<div class="form-header">Пароль</div>
+					<div class="form-cont">
+						<input type="password" class="inp-pass">
+						<input type="text" class="inp-pass-txt">
+						<a href="" class="pass-btn"></a>
+						<div class="pass-help"><a href="">Забыли пароль?</a></div>
+					</div>
+					<div class="form-header">Номер телефона (с кодом)</div>
+					<div class="form-cont"><input type="text"><span class="form-ico"><img src="img/ico-phone.gif" alt=""></span></div>
+					<div class="form-header">Промокод  <span>(необязательно)</span></div>
+					<div class="form-cont"><input type="text"><span class="form-ico"><img src="img/ico-procent.gif" alt=""></span></div>
+					<div class="form-kapcha"><img src="img/form-kapcha.gif" alt=""></div>
+					<div class="form-check">
+						<input id="checkbox" type="checkbox"><label for="checkbox">Мне более 18 лет, с <a href="">правилами</a> ознакомлен и согласен</label>
+					</div>
+
+					<div class="form-btn"><a href="" class="btn-st btn-red">Зарегистрироваться</a></div>
+				</div>
+				<div class="form-footer">У меня есть профиль на сайте. <a href="" class="popup_open" rel="#enter-popup">Войти</a></div>
+			</div>
+		</div>
+
+		<div class="popup_bg"></div>
+		<!-- END POPUP -->
+	
+	</body>
+</html>
