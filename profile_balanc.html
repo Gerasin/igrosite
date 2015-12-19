@@ -22,6 +22,9 @@
 		<script src="js/vendors/scrollercontent/jquery.mThumbnailScroller.js"></script>
 		<script src="js/jquery.mousewheel.js"></script>
 		<script src="js/jquery.selectik.min.js"></script>
+		<script src="js/jquery.jscrollpane.min.js"></script>
+		<script src="js/jquery.mask.min.js"></script>
+
 		<script src="js/interface.js"></script>
 	</head>
 	<body>
@@ -231,7 +234,8 @@
 				<div class="profile-right profile-balance">
 					<div class="balance-ava"><img src="img/ava1.jpg" alt=""></div>
 					<div class="balance-total">
-						Ваш баланс: &#160; <strong>24 375</strong>.00 руб. <em><img src="img/slash.png" alt=""></em> <span>Бонусов: 300 000</span> <a href=""><img src="img/ico-help.png" class="ico-help" alt=""></a>
+						Ваш баланс: &#160; <strong>24 375</strong>.00 <i class="rub">Р</i> <em><img src="img/slash.png" alt=""></em> <span>Бонусов: 300 000</span> &#160;
+						<span class="form-tooltip"><img src="img/ico-help.png" class="ico-help" alt=""><span><em>Подсказка</em></span></span>
 						<div class="balance-btn">
 							<ul>
 								<li class="balance-add"><a href="#tab-balance-1">Пополнить</a></li><li class="balance-withdraw"><a href="#tab-balance-2">Вывести</a></li>
@@ -245,7 +249,7 @@
 								<div class="balance-form-head">
 									<a href="" class="balance-form-close"></a>
 									<ul class="balance-bank">
-										<li><a href="#history-1"><img src="img/master.png" alt=""></a></li><!--
+										<li class="active"><a href="#history-1, #history-11"><img src="img/master.png" alt=""></a></li><!--
 										--><li><a href="#history-2"><img src="img/visa.png" alt=""></a></li><!--
 										--><li><a href="#history-3"><img src="img/qivi.png" alt=""></a></li><!--
 										--><li><a href="#history-4"><img src="img/wm.png" alt=""></a></li><!--
@@ -253,14 +257,14 @@
 									</ul>
 								</div>
 							</div>
-							<div id="history-1" class="balance-form-tab">
+							<div id="history-1" class="balance-form-tab" style="display: block;">
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт MasterCard</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="+7 ___ ___ __ __" mask="+7 000 000 00 00" class='mask-shablon'></div>
 
 										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -292,10 +296,10 @@
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт VISA</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="____ ____ ____ ____" mask="0000 0000 0000 0000" class='mask-shablon'></div>
 
 										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -327,10 +331,10 @@
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт QIWI</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="____ ____ ____ ____" mask="0000 0000 0000 0000" class='mask-shablon'></div>
 
 										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -362,10 +366,10 @@
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт WebMoney</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="____________" mask="000000000000" class='mask-shablon'></div>
 
 										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -397,10 +401,10 @@
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт Яедекс Деньги</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="____________" mask="000000000000" class='mask-shablon'></div>
 
 										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -434,7 +438,7 @@
 								<div class="balance-form-head">
 									<a href="" class="balance-form-close"></a>
 									<ul class="balance-bank">
-										<li><a href="#history-11"><img src="img/master.png" alt=""></a></li><!--
+										<li class="active"><a href="#history-11"><img src="img/master.png" alt=""></a></li><!--
 										--><li><a href="#history-12"><img src="img/visa.png" alt=""></a></li><!--
 										--><li><a href="#history-13"><img src="img/qivi.png" alt=""></a></li><!--
 										--><li><a href="#history-14"><img src="img/wm.png" alt=""></a></li><!--
@@ -442,14 +446,14 @@
 									</ul>
 								</div>
 							</div>
-							<div id="history-11" class="balance-form-tab">
+							<div id="history-11" class="balance-form-tab" style="display: block;">
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт MasterCard</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="+7 ___ ___ __ __" mask="+7 000 000 00 00" class='mask-shablon'></div>
 
-										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-header"><i>2.</i> Сумма для вывода</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -481,10 +485,10 @@
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт VISA</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="____ ____ ____ ____" mask="0000 0000 0000 0000" class='mask-shablon'></div>
 
-										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-header"><i>2.</i> Сумма для вывода</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -516,10 +520,10 @@
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт QIWI</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="____ ____ ____ ____" mask="0000 0000 0000 0000" class='mask-shablon'></div>
 
-										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-header"><i>2.</i> Сумма для вывода</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -551,10 +555,10 @@
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт WebMoney</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="____________" mask="000000000000" class='mask-shablon'></div>
 
-										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-header"><i>2.</i> Сумма для вывода</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -586,10 +590,10 @@
 								<div class="balance-form-in">
 									<div class="balance-form-inp">
 										<div class="bal-form-header"><i>1.</i> Введите аккаунт Яедекс Деньги</div>
-										<div class="bal-form-input"><input type="text"></div>
+										<div class="bal-form-input"><input type="text" placeholder="____________" mask="000000000000" class='mask-shablon'></div>
 
-										<div class="bal-form-header"><i>2.</i> Сумма для пополнения</div>
-										<div class="bal-form-input"><input type="text" class="form-pay"> руб.</div>
+										<div class="bal-form-header"><i>2.</i> Сумма для вывода</div>
+										<div class="bal-form-input"><input type="text" class="form-pay"> <i class="rub">Р</i></div>
 
 										<div class="bal-form-header"><i>3.</i> Код, полученный в СМС 
 											<span class="form-tooltip"><img src="img/ico-help-bl.png" alt=""><span><em>Подсказка</em></span></span>
@@ -635,7 +639,7 @@
 									<td><img src="img/h-ya.png" alt=""></td>
 									<td>Пополнение из Яндекс.Кошелек <br>
 									<span>Отправитель 325478921457</span></td>
-									<td>10 000 руб.</td>
+									<td>10 000 <i class="rub">Р</i></td>
 									<td></td>
 									<td class="last">Успешно</td>
 								</tr>
@@ -645,7 +649,7 @@
 									<td>Вывод средств на Qiwi Кошелек <br>
 									<span>Отправитель 325478921457</span></td>
 									<td></td>
-									<td><span class="color-red">−5000 руб.</span></td>
+									<td><span class="color-red">−5000 <i class="rub">Р</i></span></td>
 									<td class="last"><span class="color-red">Отказано</span></td>
 								</tr>
 								<tr>
@@ -654,7 +658,7 @@
 									<td>Вывод средств на Qiwi Кошелек <br>
 									<span>Отправитель 325478921457</span></td>
 									<td></td>
-									<td>−1000 руб.</td>
+									<td>−1000 <i class="rub">Р</i></td>
 									<td class="last">Успешно</td>
 								</tr>
 								<tr>
@@ -663,7 +667,7 @@
 									<td>Вывод средств на Qiwi Кошелек <br>
 									<span>Отправитель 325478921457</span></td>
 									<td></td>
-									<td>−1000 000 руб.</td>
+									<td>−1000 000 <i class="rub">Р</i></td>
 									<td class="last">Успешно</td>
 								</tr>
 								<tr>
@@ -671,7 +675,7 @@
 									<td><img src="img/h-wm.png" alt=""></td>
 									<td>Пополнение из Visa/MasterCard <br>
 									<span>Отправитель 325478921457</span></td>
-									<td>500 890 руб.</td>
+									<td>500 890 <i class="rub">Р</i></td>
 									<td></td>
 									<td class="last">Успешно</td>
 								</tr>
@@ -680,7 +684,7 @@
 									<td><img src="img/h-wm.png" alt=""></td>
 									<td>Пополнение из Visa/MasterCard <br>
 									<span>Отправитель 325478921457</span></td>
-									<td>500 890 руб.</td>
+									<td>500 890 <i class="rub">Р</i></td>
 									<td></td>
 									<td class="last">Успешно</td>
 								</tr>
@@ -689,7 +693,7 @@
 									<td><img src="img/h-ya.png" alt=""></td>
 									<td>Пополнение из Яндекс.Кошелек <br>
 									<span>Отправитель 325478921457</span></td>
-									<td>10 000 руб.</td>
+									<td>10 000 <i class="rub">Р</i></td>
 									<td></td>
 									<td class="last">Успешно</td>
 								</tr>
@@ -699,7 +703,7 @@
 									<td>Вывод средств на Qiwi Кошелек <br>
 									<span>Отправитель 325478921457</span></td>
 									<td></td>
-									<td><span class="color-red">−5000 руб.</span></td>
+									<td><span class="color-red">−5000 <i class="rub">Р</i></span></td>
 									<td class="last"><span class="color-red">Отказано</span></td>
 								</tr>
 							</table>
@@ -794,11 +798,11 @@
 			<div class="popup-soc">
 				<p><span>Войти через</span></p>
 				<ul class="soc">
-					<li><a href="" class="vk"></a></li>
-					<li><a href="" class="mail"></a></li>
-					<li><a href="" class="ya"></a></li>
-					<li><a href="" class="fb"></a></li>
-					<li><a href="" class="gplus"></a></li>
+					<li><a href="" class="vk"><span></span>Вконтакте</a></li>
+					<li><a href="" class="mail"><span></span>Mail.ru</a></li>
+					<li><a href="" class="ya"><span></span>Яндекс</a></li>
+					<li><a href="" class="fb"><span></span>Facebook</a></li>
+					<li><a href="" class="gplus"><span></span>Google</a></li>
 				</ul>
 			</div>
 			<div class="popup-form">
@@ -824,11 +828,11 @@
 			<div class="popup-soc">
 				<p><span>Быстрация регистрация через соц.сети</span></p>
 				<ul class="soc">
-					<li><a href="" class="vk"></a></li>
-					<li><a href="" class="mail"></a></li>
-					<li><a href="" class="ya"></a></li>
-					<li><a href="" class="fb"></a></li>
-					<li><a href="" class="gplus"></a></li>
+					<li><a href="" class="vk"><span></span>Вконтакте</a></li>
+					<li><a href="" class="mail"><span></span>Mail.ru</a></li>
+					<li><a href="" class="ya"><span></span>Яндекс</a></li>
+					<li><a href="" class="fb"><span></span>Facebook</a></li>
+					<li><a href="" class="gplus"><span></span>Google</a></li>
 				</ul>
 			</div>
 			<div class="popup-form">

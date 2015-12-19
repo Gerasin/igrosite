@@ -29,6 +29,9 @@
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .open_list {

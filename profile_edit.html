@@ -22,6 +22,9 @@
 		<script src="js/vendors/scrollercontent/jquery.mThumbnailScroller.js"></script>
 		<script src="js/jquery.mousewheel.js"></script>
 		<script src="js/jquery.selectik.min.js"></script>
+		<script src="js/jquery.jscrollpane.min.js"></script>
+		<script src="js/jquery.mask.min.js"></script>
+
 		<script src="js/interface.js"></script>
 	</head>
 	<body>
@@ -232,26 +235,27 @@
 					<div class="h3">Фото профиля</div>
 					<div class="profile-ava profile-edit-item">
 						<div class="ava-ico"><img src="img/ico-ava.png" alt=""></div>
-						<div class="ava-img"><img src="img/ava.jpg" alt=""></div>
+						<div class="ava-img"><img src="img/ava.jpg" id="profile-avatar" alt=""></div>
 						<div class="ava-setupe">
-							<p><a href=""><span><img src="img/ico-down.png" alt=""></span>Загрузить автар</a></p>
+							<p><a href="" class="ava-down"><span><img src="img/ico-down.png" alt=""></span>Загрузить автар</a></p>
 							<p><a href=""><span><img src="img/ico-delet.png" alt=""></span>Удалить старый</a></p>
+							<input type="file" id="uploader" class="uploader">
 						</div>
 						<div class="ava-default">
 							<div class="h4">Выбрать из стандартных</div>
 							<ul class="ava-default-list">
-								<li><a href=""><img src="img/ava-def-1.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-2.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-3.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-4.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-5.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-6.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-7.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-8.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-9.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-10.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-11.jpg" alt=""></a></li>
-								<li><a href=""><img src="img/ava-def-12.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-1.jpg"><img src="img/ava-def-1.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-2.jpg"><img src="img/ava-def-2.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-3.jpg"><img src="img/ava-def-3.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-4.jpg"><img src="img/ava-def-4.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-5.jpg"><img src="img/ava-def-5.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-6.jpg"><img src="img/ava-def-6.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-7.jpg"><img src="img/ava-def-7.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-8.jpg"><img src="img/ava-def-8.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-9.jpg"><img src="img/ava-def-9.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-10.jpg"><img src="img/ava-def-10.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-11.jpg"><img src="img/ava-def-11.jpg" alt=""></a></li>
+								<li><a href="" rel="img/ava-def-12.jpg"><img src="img/ava-def-12.jpg" alt=""></a></li>
 							</ul>
 						</div>
 						<div class="clearfix"></div>
@@ -296,11 +300,37 @@
 							<div class="profile-form profile-form-date">
 								<div class="form-header">Дата рождения</div>
 								<div class="select-box">
-									<select name="" style="width:75px">
+									<select name="" style="width:65px">
 										<option value="">01</option>
 										<option value="">02</option>
 										<option value="">03</option>
 										<option value="">04</option>
+										<option value="">05</option>
+										<option value="">06</option>
+										<option value="">07</option>
+										<option value="">08</option>
+										<option value="">09</option>
+										<option value="">10</option>
+										<option value="">11</option>
+										<option value="">12</option>
+										<option value="">13</option>
+										<option value="">14</option>
+										<option value="">15</option>
+										<option value="">16</option>
+										<option value="">17</option>
+										<option value="">18</option>
+										<option value="">19</option>
+										<option value="">20</option>
+										<option value="">21</option>
+										<option value="">22</option>
+										<option value="">23</option>
+										<option value="">24</option>
+										<option value="">25</option>
+										<option value="">26</option>
+										<option value="">27</option>
+										<option value="">28</option>
+										<option value="">29</option>
+										<option value="">30</option>
 									</select>
 								</div>
 								<div class="select-box">
@@ -312,7 +342,7 @@
 									</select>
 								</div>
 								<div class="select-box">
-									<select name="" style="width: 90px">
+									<select name="" style="width: 80px">
 										<option value="">1990</option>
 										<option value="">1991</option>
 										<option value="">1992</option>
@@ -444,11 +474,11 @@
 			<div class="popup-soc">
 				<p><span>Войти через</span></p>
 				<ul class="soc">
-					<li><a href="" class="vk"></a></li>
-					<li><a href="" class="mail"></a></li>
-					<li><a href="" class="ya"></a></li>
-					<li><a href="" class="fb"></a></li>
-					<li><a href="" class="gplus"></a></li>
+					<li><a href="" class="vk"><span></span>Вконтакте</a></li>
+					<li><a href="" class="mail"><span></span>Mail.ru</a></li>
+					<li><a href="" class="ya"><span></span>Яндекс</a></li>
+					<li><a href="" class="fb"><span></span>Facebook</a></li>
+					<li><a href="" class="gplus"><span></span>Google</a></li>
 				</ul>
 			</div>
 			<div class="popup-form">
@@ -474,11 +504,11 @@
 			<div class="popup-soc">
 				<p><span>Быстрация регистрация через соц.сети</span></p>
 				<ul class="soc">
-					<li><a href="" class="vk"></a></li>
-					<li><a href="" class="mail"></a></li>
-					<li><a href="" class="ya"></a></li>
-					<li><a href="" class="fb"></a></li>
-					<li><a href="" class="gplus"></a></li>
+					<li><a href="" class="vk"><span></span>Вконтакте</a></li>
+					<li><a href="" class="mail"><span></span>Mail.ru</a></li>
+					<li><a href="" class="ya"><span></span>Яндекс</a></li>
+					<li><a href="" class="fb"><span></span>Facebook</a></li>
+					<li><a href="" class="gplus"><span></span>Google</a></li>
 				</ul>
 			</div>
 			<div class="popup-form">
@@ -509,6 +539,10 @@
 
 		<div class="popup_bg"></div>
 		<!-- END POPUP -->
+
+
+		<script src="js/resample.js"></script>
+		<script src="js/avatar.js"></script>
 	
 	</body>
 </html>
