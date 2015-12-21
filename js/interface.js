@@ -228,11 +228,11 @@ $(document).ready(function() {
             $('#time-tab2 .mTSAutoContainer').animate({'left' : 0 + 'px'})
         } else {
             dragRight = $('#time-tab1 .mTSAutoContainer').parent().width() - $('#time-tab1 .mTSAutoContainer').width();
-            dragLeft = $('#time-tab1 .mTSAutoContainer').parent().width() / 2;
+            dragLeft = 0;
             if(centerTime < dragRight) { 
                 $('#time-tab1 .mTSAutoContainer').animate({'left' : dragRight + 'px'})
             } else {
-                if(centerTime < dragLeft) {
+                if(centerTime > dragLeft) {
                     $('#time-tab1 .mTSAutoContainer').animate({'left' : 0 + 'px'})
                 } else {
                     $('#time-tab1 .mTSAutoContainer').animate({'left' : centerTime + 'px'})
