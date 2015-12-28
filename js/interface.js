@@ -660,8 +660,79 @@ $(document).ready(function() {
             console.log(namberAct);
         });
         return false;
-    })
+    });
 
+
+    // Выбор таба выйгровших
+    $('.user-ac a').click(function(){
+        var indexTab = $(this).parents('.user-ac').index();
+        $('.user-ac').removeClass('active');
+        $(this).parents('.user-ac').addClass('active');
+        if($(this).parents('.user-list').next('.user-gift:visible').length) {} else {
+            $('.user-gift').slideUp();
+        };
+        $(this).parents('.user-list').next('.user-gift').find('.user-gift-item').hide();
+        $(this).parents('.user-list').next('.user-gift').find('.user-gift-item').eq(indexTab).show();
+        $(this).parents('.user-list').next('.user-gift').slideDown();
+
+        return false;
+    });
+    $('.close-user-gift').click(function(){
+        $('.user-gift').slideUp();
+        $('.user-ac').removeClass('active');
+        return false;
+    });
+    $('.loto-tab-cont-i:not(:first)').hide();
+    $('.loto-tab a').click(function(){
+        var tabInd = $(this).index();
+        $('.loto-tab a').removeClass('active');
+        $(this).addClass('active');
+        $('.loto-tab-cont-i').hide();
+        $('.loto-tab-cont-i').eq(tabInd).show();
+        return false;
+    });
+
+
+    $(".datepicker").datepicker({
+        dateFormat: "dd.mm.yy"
+    });
+    $('.input-reset').click(function(){
+        $('.arhive-form-inp input').val(' ');
+        return false;
+    });
+
+    $('.form-namber-btn a').click(function(){
+        $('.number-sp').removeClass('active');
+        $('.form-namber-inp input').each(function(){
+            namberInp = $(this).val();
+            namberAct = '.num-' + namberInp;
+            $(namberAct).addClass('active');
+        });
+        return false;
+    });
+    $('.form-namber-reset').click(function(){
+        $('.number-sp').removeClass('active');
+        $('.form-namber-inp input').each(function(){
+            $(this).val(' ');
+        });
+        return false;
+    });
+
+
+
+});
+
+// datepicker
+
+jQuery(function($){
+    $.datepicker.regional['ru'] = {
+        monthNames: ['Яварь', 'Февраль', 'Март', 'Апрель',
+        'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь',
+        'Октябрь', 'Ноябрь', 'Декабрь'],
+        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        firstDay: 1,
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
 });
 
 
