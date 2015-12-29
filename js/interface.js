@@ -175,6 +175,21 @@ $(document).ready(function() {
                     } else {
                         $('.mTSAutoContainer').css({'left' : 0});
                     }
+                };
+
+                console.log(h);
+
+                if(h < 2) {
+                    $('.time_bar-message').addClass('left');
+                    $('.time_bar-message').removeClass('right');
+                } else {
+                    if(h < 23) {
+                        $('.time_bar-message').removeClass('left');
+                        $('.time_bar-message').removeClass('right');
+                    } else {
+                        $('.time_bar-message').addClass('right');
+                        $('.time_bar-message').removeClass('left');
+                    }
                 }
                 
             };
@@ -692,10 +707,61 @@ $(document).ready(function() {
         return false;
     });
 
+    // datepicker
+    $( ".datepicker" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      dateFormat: "dd.mm.yy",
+      numberOfMonths: 2,
 
-    $(".datepicker").datepicker({
-        dateFormat: "dd.mm.yy"
+      // закрытие
+      onClose: function (dateText, inst) {
+        if ($.isFunction(opts.callback)) {
+          opts.callback.apply(this, arguments);
+        }
+      },
+      // выбор даты
+      onSelect: function (dateText, inst) {
+        var textStart;
+          if (!inst.rangeStart) {
+            inst.inline = true;
+            inst.rangeStart = dateText;
+          } else {
+            inst.inline = false;
+            textStart = inst.rangeStart;
+            if (textStart !== dateText) {
+              $(this).val(textStart + " - " + dateText);
+              inst.rangeStart = null;
+            }
+          }
+      }
+
     });
+    
+    // Выбор поиска
+    $('.lnk-date').click(function(){
+        $(this).addClass('active');
+        $('.lnk-tirag').removeClass('active');
+        $('.inp-box-date').show();
+        $('.inp-box-tirag').hide();
+        return false;
+    });
+    $('.lnk-tirag').click(function(){
+        $(this).addClass('active');
+        $('.lnk-date').removeClass('active');
+        $('.inp-box-tirag').show();
+        $('.inp-box-date').hide();
+        return false;
+    });
+
+    // jScrollPane
+    $('.bell').click(function(){
+        $('.popup-message').fadeIn();
+        $('.popup-message').jScrollPane();
+    })
+    
+
+
     $('.input-reset').click(function(){
         $('.arhive-form-inp input').val(' ');
         return false;
@@ -705,15 +771,30 @@ $(document).ready(function() {
         $('.number-sp').removeClass('active');
         $('.form-namber-inp input').each(function(){
             namberInp = $(this).val();
+            if(namberInp.length == 1) {
+                namberInp = '0' + namberInp;
+            }
             namberAct = '.num-' + namberInp;
             $(namberAct).addClass('active');
         });
         return false;
     });
+    $(".form-namber-inp input").keydown(function(event) {
+        if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || 
+            (event.keyCode == 65 && event.ctrlKey === true) || 
+            (event.keyCode >= 35 && event.keyCode <= 39) ) {
+                 return;
+        }
+        else {
+            if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+                event.preventDefault(); 
+            }   
+        }
+    });
     $('.form-namber-reset').click(function(){
         $('.number-sp').removeClass('active');
         $('.form-namber-inp input').each(function(){
-            $(this).val(' ');
+            $(this).val('');
         });
         return false;
     });
@@ -903,4 +984,13 @@ $(document).mouseup(function(e){
         $('.tirag-select-opt').fadeOut();
     };
 
+    var container2 = $(".bell, .popup-message"); 
+        if (!container2.is(e.target) && container2.has(e.target).length === 0){
+        $('.popup-message').fadeOut();
+    };
+
 });
+
+
+
+
