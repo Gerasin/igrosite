@@ -564,8 +564,7 @@ body {
 .top {
   background: #2a293c;
   height: 30px;
-  line-height: 30px;
-  overflow: hidden; }
+  line-height: 30px; z-index: 20; position: relative;}
   .top ul.fleft {
     margin-right: 190px; }
 
@@ -807,7 +806,7 @@ body {
     filter: blur(5px);
     filter: url('blur.svg#blur');*/}
 
-.edition.blur, .main-games.blur {
+body .blur {
   -webkit-filter: url(#blur);
    filter: url(#blur);
    -webkit-filter: blur(5px);
@@ -2122,6 +2121,34 @@ div.meter span {
 .form-check {padding: 0 0 20px;}
   .form-check label {position: absolute;}
 
+.popup-loto {width: 770px; padding: 30px; margin-left: -385px;}
+  .loto-raffled {
+    float: left;
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 16px 0 0;
+    margin: 0 0 11px;
+    overflow: hidden;
+    background: #f2f2f2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    }
+    .loto-raffled span {display: block; float: left; height: 35px; width: 37px; margin: 0 16px 0 0; text-align: center; background: #ffea00;}
+  .popup-loto-date {float: right; padding: 11px 0 0;}
+  .popup-loto h2 {font-size: 48px; line-height: 52px;margin: 0 0 12px; font-weight: normal; font-family: 'AvenirNextCyr-Regular';}
+  .popup-loto p {font-size: 16px; line-height: 24px;margin: 0 0 24px; padding: 0;}
+.popup-loto-sl {padding: 0; margin: 0; position: relative;}
+  .popup-loto-sl ul {padding: 0; margin: 0;}
+    .popup-loto-sl ul li {list-style: none; padding: 0; margin: 0;}
+.popup-loto .slick-dots {display: none !important;}
+.popup-loto .slick-arrow {position: absolute; border: 0; z-index: 30; width: 60px; height: 60px; top: 50%; margin-top: -30px; background: url(../img/slick-btn.png) 0 0 no-repeat; font-size: 0;}
+.popup-loto .slick-arrow:hover {opacity: 0.7;}
+.popup-loto .slick-prev {left: 18px;}
+.popup-loto .slick-next {background-position: -60px 0; right: 18px;}
+
+
 
 /*------------------
   page inner
@@ -2841,49 +2868,166 @@ strong .pr, h3 .pr, .user-ac-pay .pr, .jackpot .pr, .ticket-pay .pr, .ticket-gif
 
 
 .loto_sto {position: relative; width: 1230px; margin: 0 auto 40px;}
-  .loto_sto-left {width: 950px;}
-    .loto_sto-tab {padding: 0; margin: 0; width: 96px; float: left; border: 1px solid #453b80;
+  .loto_sto-left {width: 950px; padding-bottom: 40px;}
+    .loto_sto-tab {padding: 0; margin: 10px 0 0; width: 96px; float: left; border: 1px solid #453b80;
       -webkit-border-radius: 4px;
       -moz-border-radius: 4px;
       border-radius: 4px;}
       .loto_sto-tab li {list-style: none; font-size: 18px; padding-bottom: 3px; position: relative;}
-        .loto_sto-tab a {display: block; padding: 16px 0 17px 30px; text-decoration: none; color: #7bfffd; background: #48408a; position: relative;
+        .loto_sto-tab em {display: block; cursor: pointer; font-style: normal; padding: 16px 0 17px 30px; text-decoration: none; color: #7bfffd; background: #48408a; position: relative;
           -webkit-border-radius: 4px;
           -moz-border-radius: 4px;
           border-radius: 4px;}
-          .loto_sto-tab a span {border-bottom: 1px dashed #7bfffd;}
-          .loto_sto-tab a:hover span {border-color: transparent;}
+          .loto_sto-tab em span {border-bottom: 1px dashed #7bfffd;}
+          .loto_sto-tab em:hover span {border-color: transparent;}
       .loto_sto-tab li.last {padding: 0;}
-       .loto_sto-tab li.active a {background: #ffea00; color: #000; cursor: default;}
-       .loto_sto-tab li.active a:before {position: absolute; content: ' '; right: -5px; top: 50%; margin-top: -6px;
+       .loto_sto-tab li.active em {background: #ffea00; color: #000; cursor: default;}
+       .loto_sto-tab li.active em:before {position: absolute; content: ' '; right: -5px; top: 50%; margin-top: -6px;
           border-top: 6px solid transparent;
           border-left: 5px solid #ffea00;
           border-bottom: 6px solid transparent;}
-        .loto_sto-tab li.active a span {border: 0;}
+        .loto_sto-tab li.active em span {border: 0;}
     .loto_sto-item {margin: 0 0 0 120px;}
-      .loto_sto-i {width: 250px; height: 423px; background-color: rgba(0,0,0,.1); border: solid 1px rgba(0,0,0,.21); padding: 13px 25px 0 23px;
+      .loto_sto-i {width: 250px; height: 423px; position: relative; background-color: rgba(0,0,0,.1); border: solid 1px rgba(0,0,0,.21); padding: 15px 25px 0 23px;
+        float: left; margin: 0 21px 30px 0; display: none;
         -webkit-border-radius: 11px;
         -moz-border-radius: 11px;
-        border-radius: 11px;}
-          .loto_sto-i-head {color: #fff; font-size: 13px; margin: 0 0 10px; overflow: hidden;}
+        border-radius: 11px;
+        -webkit-box-shadow: 0 9px 15px rgba(66,61,5,0.15);
+        -moz-box-shadow: 0 9px 15px rgba(66,61,5,0.15);
+        box-shadow: 0 9px 15px rgba(66,61,5,0.15);
+        -moz-transition: background 0.3s linear;
+        -o-transition: background 0.3s linear;
+        -webkit-transition: background 0.3s linear;
+        transition: background 0.3s linear;
+        }
+      .loto_sto-i:hover {background-color: rgba(255,255,255,.1);}
+          .loto_sto-i-head {color: #fff; font-size: 13px;margin: 0 0 11px; overflow: hidden;}
             .loto_sto-i-clock {float: right;}
-          .loto_sto-i h2 {font-weight: normal; font-size: 22px; line-height: 28px; margin: 0 0 10px; padding: 0;}
+          .loto_sto-i h2 {font-weight: normal; font-size: 22px; line-height: 28px;margin: 0 0 7px; padding: 0;}
             .loto_sto-i h2 a {color: #7bfffd; text-decoration: none; border-bottom: 1px dashed #7bfffd;}
             .loto_sto-i h2 a:hover {border-color: transparent;}
-          .loto_sto-info {overflow: hidden; margin: 0 0 10px; color: #ed555b;}
+          .loto_sto-info {overflow: hidden;margin: 0 0 13px; color: #ed555b;}
             .loto_sto-stay {float: right; color: #b5b0c8;}
-        .loto_sto-slider {background: #fff; height: 5px; margin: 0 0 2px; position: relative;}
+        .loto_sto-slider {background: #fff; height: 5px; margin: 0 0 2px; position: relative; z-index: 10;}
           .loto_sto-slider span {display: block; height: 5px; background: #ed555b; position: relative;}
             .loto_sto-slider span em {position: absolute; width: 60px; right: -30px; top: -8px; text-align: center;}
               .loto_sto-slider span em img {vertical-align: top;}
-          .loto_sto-img {height: 120px; width: 200px; overflow: hidden; margin: 0 0 24px;}
-        .loto_sto-i .games-list__item__txt {padding: 0; margin: 0 -3px 10px;}
+          .loto_sto-img {height: 150px; width: 200px; overflow: hidden; margin: 0 0 24px; position: relative;}
+            .loto_sto-img a {display: block; height: 150px; width: 200px; position: relative;}
+            .loto_sto-img a:after {background: url(../img/image_overlay.png) 0 0 no-repeat; z-index: 5; position: absolute; content: ' '; top: 0; left: -200px; width: 200px; height: 150px;}
+            .loto_sto-i:hover .loto_sto-img a:after {left: 0;
+              -moz-transition: all 0.3s linear;
+              -o-transition: all 0.3s linear;
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;}
+        .loto_sto-i .games-list__item__txt {padding: 0;margin: 0 -3px 8px;}
           .loto_sto-i .games-list__item__txt span {font-size: 13px; }
-          .loto_sto-i .games-list__item__txt span.price {width: 67px; margin-right: 11px;}
+          .loto_sto-i .games-list__item__txt span.price {width: 67px; margin-right: 16px;}
+          .loto_sto-i .btn {border-color: #47316b;}
+          .loto_sto-i .games-list__item__txt .btn.btn--pink:hover {background: #eabf00;}
+        .loto_sto-act-namber {padding: 0 0 21px; color: #b8b0c8;text-align: center;margin: -9px 0 0;}
+        .loto_sto-sl-act {height: 5px; margin: 0 -4px; position: relative; box-shadow: 0 0 0 1px #9178a9; background: none; border: 0;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;}
+          .loto_sto-sl-act span {position: absolute; z-index: 1; background: #fff; height: 5px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;}
+            .loto_sto-sl-act em {position: absolute; z-index: 3; top: -10px; right: -12px; font-style: normal; width: 25px; height: 25px; line-height: 25px; text-align: center; background-color: #ffea00;
+              -webkit-border-radius: 12px;
+              -moz-border-radius: 12px;
+              border-radius: 12px;
+              -webkit-box-shadow: 0 2px 7px rgba(66,61,5,.55);
+              -moz-box-shadow: 0 2px 7px rgba(66,61,5,.55);
+              box-shadow: 0 2px 7px rgba(66,61,5,.55);}
+      .loto_sto-yellow .loto_sto-info {color: #ffea00;}
+      .loto_sto-yellow .loto_sto-slider span {background: #ffea00;}
+      .loto_sto-green .loto_sto-info {color: #36d200;}
+      .loto_sto-green .loto_sto-slider span {background: #36d200;}
 
-  .loto_sto-right {position: absolute;  right: 30px; top: 33px;}
+  .loto_sto-right {position: absolute;right: 29px;top: 34px; width: 230px;}
+    .sel_tickets-h {padding: 0 0 23px; color: #fff; font-size: 18px;}
+    .sel_tickets-items {padding: 0 0 10px;}
+      .sel_tickets-i {position: relative;margin: 0 21px 15px 0; color: #c1afc2; font-size: 13px;}
+        .sel_tickets-i i {color: #8a6591; font-style: normal; position: absolute; top: 0; left: -20px;}
+        .sel_tickets-i em {display: block; float: right; color: #7bfffd;font-size: 18px; font-style: normal;margin-top: -4px;}
+        .sel_tickets-i .sel_tickets-name {position: relative; overflow: hidden; padding-bottom: 5px;}
+          .sel_tickets-i .sel_tickets-name span {position: relative;}
+            .sel_tickets-i .sel_tickets-name span:before {position: absolute; content: ' '; right: -203px; width: 200px; bottom: 2px; height: 2px; background: url(../img/border2.png) 0 0 repeat-x;}
+        .sel_tickets-close {position: absolute; bottom: 4px;right: -25px; width: 18px; height: 18px; background: url(../img/sel_tickets-close.png) 0 0 no-repeat;}
+        .sel_tickets-close:hover {background-position: 0 -18px;}
 
+        .sel_tickets-total {margin: 39px 20px 18px 0;}
+          .sel_tickets-total em {color: #fff;font-size: 23px;margin-top: -7px;}
+          .sel_tickets-total strong {font-weight: normal; font-family: 'AvenirNextCyr-Regular';}
+        .oferta-check {margin: 10px 0 33px; color: #fff;}
+          .oferta-check input[type='checkbox'] + label:before {background: url(../img/checkbox-min.png) 0 0 no-repeat; width: 12px; height: 12px; top: 3px;}
+          .oferta-check input[type='checkbox']:checked + label:before {background: url(../img/checkbox-min.png) 0 -15px no-repeat;}
+          .oferta-check input[type='checkbox'] + label {padding-left: 20px; }
+  .loto_sto-i .ui-slider-range {background: #fff;}
+  .loto_sto-i .ui-slider-handle {position: absolute;  z-index: 3; border: 0; top: -10px; color: #ffea00; font-weight: normal; font-style: normal; width: 25px; height: 25px; line-height: 25px; text-align: center; background: #ffea00;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 2px 7px rgba(66,61,5,.55);
+    -moz-box-shadow: 0 2px 7px rgba(66,61,5,.55);
+    box-shadow: 0 2px 7px rgba(66,61,5,.55);}
+    .loto_sto-i.active .ui-slider-handle {color: #000;}
+    .loto_sto-i .loto_sto-act-namber {opacity: 0;}
+    .loto_sto-i.active .loto_sto-act-namber {opacity: 1;}
+  .sel_tickets-hide {display: none;}
+  .btn.btn--pink em {font-style: normal;}
 
+.long-username {float: left; position: relative; padding: 0 26px 0 20px;}
+  .long-username a {}
+  a.top__anchor {text-decoration: none; }
+    a.top__anchor span {border-bottom: 1px dotted #00a4d3; display: inline-block;line-height: 13px; }
+    a.top__anchor:hover span {border-bottom: 1px dotted transparent;}
+  .long-username img {position: absolute; top: 9px; left: 0;}
+.user-autoriz {width: 462px; height: 30px; float: left;}
+.balance-info {width: 178px; text-align: center; float: left; position: relative;}
+.balance-info.active {background: #36354c;} 
+  .balance-info-lnk {display: inline-block; line-height: 30px; position: relative; padding: 0 10px 0 19px; color: #00a4d3;}
+    .balance-info-lnk img {position: absolute; left: 0; top: 10px;}
+    .balance-info-lnk a {text-decoration: none; line-height: 13px;}
+    .balance-info-lnk span {border-bottom: 1px dotted #00a4d3; display: inline-block}
+    .balance-info-lnk a:hover span {border-bottom: 1px dotted transparent;}
+.balance-refill {position: absolute; display: none; top: 30px; left: 0; right: 0; background: #fff; text-align: center; padding-bottom: 16px; box-shadow: 0 9px 15px rgba(66,61,5,0.15);
+  -moz-border-radius-bottomright: 11px;
+  -webkit-border-bottom-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  -moz-border-radius-bottomleft: 11px;
+  -webkit-border-bottom-left-radius: 11px;
+  border-bottom-left-radius: 11px;  }
+  .balance-refill:before {position: absolute; content: ' '; top: -4px; left: 38px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 4px solid #fff;}
+  .balance-lnk {padding: 3px 0 3px; border-bottom: 1px solid #f2f2f2; font-size: 18px;margin-bottom: 9px;}
+  .balance-refill p {margin: 0; line-height: 16px;}
+.balance-refill-total {margin: -2px 0 6px; font-size: 22px; font-family: 'AvenirNextCyr-Bold';}
+.balance-refill .btn-st {margin-top: 13px;}
+.long-username-box {float: left; height: 30px; position: relative; padding-left: 10px; margin-left: -10px;}
+.long-username-box.active {background: #35344a;}
+.username-menu {position: absolute; display: none; top: 30px; left: 0; right: 0; background: #fff; text-align: center; padding-bottom: 16px; box-shadow: 0 9px 15px rgba(66,61,5,0.15); padding: 10px 0 15px 20px;
+  -moz-border-radius-bottomright: 11px;
+  -webkit-border-bottom-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  -moz-border-radius-bottomleft: 11px;
+  -webkit-border-bottom-left-radius: 11px;
+  border-bottom-left-radius: 11px;  }
+  .username-menu:before {position: absolute; content: ' '; top: -4px; left: 24px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 4px solid #fff;}
+  .username-menu li {list-style: none; padding: 0; text-align: left;}
+  .username-menu li.username-close a {color: #aaaaaa;}
+    .username-menu li span {display: inline-block; background: #00a4d3; color: #fff; padding: 0 5px; height: 17px; line-height: 17px; font-size: 10px; margin-left: 4px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;}
 
 
 input[type='checkbox'] {position: absolute; left: -10000px;}

@@ -33,12 +33,31 @@
 		<div class="layout">
 			<div class="top">
 				<div class="container">
-					<ul class="fleft">
-						<li class="top-menu__item"><a href="#enter-popup" class="top__anchor popup_open" rel="#enter-popup"><span>Войти</span></a></li>
-						<li class="top-menu__item"><a href="#" class="separator top__anchor"><span>Через соцсеть</span></a></li>
-						<li class="top-menu__item"><a href="#" class="top__anchor popup_open" rel="#register-popup"><span>Регистрация</span></a></li>
-					</ul>
+					<div class="user-autoriz">	
+						<div class="long-username-box">
+							<div class="long-username"><img src="img/ico-username.png" alt=""><a href="" class="top__anchor"><span>Long-username</span></a></div>
+							<ul class="username-menu">
+								<li><a href="">Личные данные</a></li>
+								<li><a href="">Уведомления</a></li>
+								<li><a href="">Друзья</a></li>
+								<li><a href="">Награды</a></li>
+								<li><a href="">Сообщения</a> <span>10</span></li>
+								<li class="username-close"><a href="">Выйти</a></li>
+							</ul>
+						</div>
+						<div class="balance-info">
+							<div class="balance-info-lnk"><img src="img/ico-balance-1.png" alt=""><a href=""><span>54 000</span></a> &#8381;</div>
+							<div class="balance-info-lnk"><img src="img/ico-balance-2.png" alt=""><a href=""><span>2000</span></a></div>
 
+							<div class="balance-refill">
+								<div class="balance-lnk"><a href="">Кошелек</a></div>
+								<p>Ваш баланс</p>
+								<div class="balance-refill-total">500 000 &#8381;</div>
+								<p>2000 бонусов</p>
+								<a href="" class="btn-st btn-red">Пополнить</a>
+							</div>
+						</div>
+					</div>
 					<ul class="fright">
 						<li class="top-menu__item"><a href="#" class="separator">Как получить выигрыш</a></li>
 						<li class="top-menu__item"><a href="#">Помощь</a></li>
@@ -50,6 +69,28 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="popup-message">
+				<div class="message-head">Сообщение</div>
+				<div class="message-cont first">
+					<h4>22.12.15, 23:34</h4>
+					<p>Всероссийская государственная лотерея</p>
+				</div>
+				<div class="message-cont">
+					<h4>22.12.15, 23:34</h4>
+					<p>Всероссийская государственная лотерея</p>
+				</div>
+				<div class="message-head">Бонус</div>
+				<div class="message-cont first">
+					<h4>22.12.15, 23:34</h4>
+					<p>Всероссийская государственная лотерея</p>
+				</div>
+				<div class="message-cont">
+					<h4>22.12.15, 23:34</h4>
+					<p>Всероссийская государственная лотерея</p>
+				</div>
+			</div>
+			
 			<header class="page-header">
 				<div class="container">
 					<div class="top-logo">
@@ -230,42 +271,181 @@
 				</ul>
 			</section>
 			<section class="loto_sto">
-				<div class="loto_sto-left">
+				<div id="container" class="loto_sto-left">
 					<ul class="loto_sto-tab">
-						<li class="active"><a href=""><span>Все</span></a></li>
-						<li><a href=""><span>100</span> &#8381;</a></li>
-						<li><a href=""><span>50</span> &#8381;</a></li>
-						<li class="last"><a href=""><span>20</span> &#8381;</a></li>
+						<li class="active filter" data-filter="all"><em><span>Все</span></em></li>
+						<li class="filter" data-filter=".category-1"><em><span>100</span> &#8381;</em></li>
+						<li class="filter" data-filter=".category-2"><em><span>50</span> &#8381;</em></li>
+						<li class="last filter" data-filter=".category-3"><em><span>20</span> &#8381;</em></li>
 					</ul>
 					<div class="loto_sto-item">
 						<div class="loto_sto-list">
-							<div class="loto_sto-i">
+							<div class="loto_sto-i mix category-1">
 								<div class="loto_sto-i-head">
 									<div class="loto_sto-i-clock">Завтра, в 9:15</div>
 									Тираж №310
 								</div>
-								<h2><a href="">Apple Watch Sport</a></h2>
+								<h2><a href="" class="popup_open" rel="#loto-1">Apple Watch Sport</a></h2>
 								<div class="loto_sto-info">
-									<div class="loto_sto-stay">110 осталось</div>
+									<div class="loto_sto-stay">50 осталось</div>
 									880 продано
 								</div>
-								<div class="loto_sto-slider">
+								<div class="loto_sto-slider" max="930" price="880">
 									<span style="width: 30%"><em><img src="img/ico-1.png" alt=""></em></span>
 								</div>
-								<div class="loto_sto-img"><img src="img/clock.png" alt=""></div>
+								<div class="loto_sto-img"><a href="" class="popup_open" rel="#loto-1"><img src="img/clock.png" alt=""></a></div>
 								<div class="games-list__item__txt">
-									<a href="" class="btn btn--pink">
-										<span class="price">100 &#8381;</span>
+									<a href="" class="btn btn--pink" rel="id_name-1">
+										<span class="price"><em>100</em> &#8381;</span>
 										<span class="buy">Добавить билет</span>
 									</a>
 								</div>
+								<div class="loto_sto-act-namber">Выбрано билетов: <span></span></div>
+								<div class="loto_sto-sl-act" max="50"></div>
+							</div>
+							<div class="loto_sto-i loto_sto-yellow mix category-2">
+								<div class="loto_sto-i-head">
+									<div class="loto_sto-i-clock">Завтра, в 9:15</div>
+									Тираж №310
+								</div>
+								<h2><a href="" class="popup_open" rel="#loto-2">Apple Watch Sport</a></h2>
+								<div class="loto_sto-info">
+									<div class="loto_sto-stay">500 осталось</div>
+									500 продано
+								</div>
+								<div class="loto_sto-slider" max="1000" price="500">
+									<span style="width: 30%"><em><img src="img/ico-2.png" alt=""></em></span>
+								</div>
+								<div class="loto_sto-img"><a href="" class="popup_open" rel="#loto-2"><img src="img/clock.png" alt=""></a></div>
+								<div class="games-list__item__txt">
+									<a href="" class="btn btn--pink" rel="id_name-2">
+										<span class="price"><em>50</em> &#8381;</span>
+										<span class="buy">Добавить билет</span>
+									</a>
+								</div>
+								<div class="loto_sto-act-namber">Выбрано билетов: <span></span></div>
+								<div class="loto_sto-sl-act" max="100"></div>
+							</div>
+							<div class="loto_sto-i loto_sto-green mix category-2">
+								<div class="loto_sto-i-head">
+									<div class="loto_sto-i-clock">Завтра, в 9:15</div>
+									Тираж №310
+								</div>
+								<h2><a href="" class="popup_open" rel="#loto-3">Apple Watch Sport</a></h2>
+								<div class="loto_sto-info">
+									<div class="loto_sto-stay">120 осталось</div>
+									880 продано
+								</div>
+								<div class="loto_sto-slider" max="1000" price="880">
+									<span style="width: 30%"><em><img src="img/ico-1.png" alt=""></em></span>
+								</div>
+								<div class="loto_sto-img"><a href="" class="popup_open" rel="#loto-3"><img src="img/clock.png" alt=""></a></div>
+								<div class="games-list__item__txt">
+									<a href="" class="btn btn--pink" rel="id_name-3">
+										<span class="price"><em>50</em> &#8381;</span>
+										<span class="buy">Добавить билет</span>
+									</a>
+								</div>
+								<div class="loto_sto-act-namber">Выбрано билетов: <span></span></div>
+								<div class="loto_sto-sl-act" max="100"></div>
+							</div>
+							<div class="loto_sto-i mix category-1">
+								<div class="loto_sto-i-head">
+									<div class="loto_sto-i-clock">Завтра, в 9:15</div>
+									Тираж №310
+								</div>
+								<h2><a href="" class="popup_open" rel="#loto-4">Apple Watch Sport</a></h2>
+								<div class="loto_sto-info">
+									<div class="loto_sto-stay">50 осталось</div>
+									880 продано
+								</div>
+								<div class="loto_sto-slider" max="930" price="880">
+									<span style="width: 30%"><em><img src="img/ico-1.png" alt=""></em></span>
+								</div>
+								<div class="loto_sto-img"><a href="" class="popup_open" rel="#loto-4"><img src="img/clock.png" alt=""></a></div>
+								<div class="games-list__item__txt">
+									<a href="" class="btn btn--pink" rel="id_name-4">
+										<span class="price"><em>100</em> &#8381;</span>
+										<span class="buy">Добавить билет</span>
+									</a>
+								</div>
+								<div class="loto_sto-act-namber">Выбрано билетов: <span></span></div>
+								<div class="loto_sto-sl-act" max="50"></div>
+							</div>
+							<div class="loto_sto-i loto_sto-yellow mix category-1">
+								<div class="loto_sto-i-head">
+									<div class="loto_sto-i-clock">Завтра, в 9:15</div>
+									Тираж №310
+								</div>
+								<h2><a href="" class="popup_open" rel="#loto-5">Apple Watch Sport</a></h2>
+								<div class="loto_sto-info">
+									<div class="loto_sto-stay">800 осталось</div>
+									200 продано
+								</div>
+								<div class="loto_sto-slider" max="1000" price="200">
+									<span style="width: 30%"><em><img src="img/ico-2.png" alt=""></em></span>
+								</div>
+								<div class="loto_sto-img"><a href="" class="popup_open" rel="#loto-5"><img src="img/clock.png" alt=""></a></div>
+								<div class="games-list__item__txt">
+									<a href="" class="btn btn--pink" rel="id_name-5">
+										<span class="price"><em>100</em> &#8381;</span>
+										<span class="buy">Добавить билет</span>
+									</a>
+								</div>
+								<div class="loto_sto-act-namber">Выбрано билетов: <span></span></div>
+								<div class="loto_sto-sl-act" max="100"></div>
+							</div>
+							<div class="loto_sto-i loto_sto-green mix category-3">
+								<div class="loto_sto-i-head">
+									<div class="loto_sto-i-clock">Завтра, в 9:15</div>
+									Тираж №310
+								</div>
+								<h2><a href="" class="popup_open" rel="#loto-6">Apple Watch Sport</a></h2>
+								<div class="loto_sto-info">
+									<div class="loto_sto-stay">600 осталось</div>
+									400 продано
+								</div>
+								<div class="loto_sto-slider" max="1000" price="400">
+									<span style="width: 30%"><em><img src="img/ico-1.png" alt=""></em></span>
+								</div>
+								<div class="loto_sto-img"><a href="" class="popup_open" rel="#loto-5"><img src="img/clock.png" alt=""></a></div>
+								<div class="games-list__item__txt">
+									<a href="" class="btn btn--pink" rel="id_name-6">
+										<span class="price"><em>20</em> &#8381;</span>
+										<span class="buy">Добавить билет</span>
+									</a>
+								</div>
+								<div class="loto_sto-act-namber">Выбрано билетов: <span></span></div>
+								<div class="loto_sto-sl-act" max="100"></div>
 							</div>
 						</div>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="loto_sto-right">
-					
+					<div class="sel_tickets-h">Выбранные билеты:</div>
+					<div class="sel_tickets-items">
+						<div class="sel_tickets-sel">
+
+						</div>
+						<div class="sel_tickets-i sel_tickets-total">
+							<em><strong>0</strong> &#8381;</em>
+							<div class="sel_tickets-name"><span>Общая сумма</span></div>
+						</div>
+						<div class="oferta-check">
+							<input type="checkbox" id="oferta"><label for="oferta">Согласен с <a href="">условиями оферты</a></label>
+						</div>
+						<div class="tirag-btn"><a href="" class="btn-st btn-red">Оплатить</a></div>
+						<div class="tirag-gift"><a href="">Подарить другу</a></div>
+					</div>
+					<div class="sel_tickets-hide">
+						<div class="sel_tickets-i">
+							<i>1.</i>
+							<em>2</em>
+							<div class="sel_tickets-name"><span>Samsung Galaxy S6 edge</span></div>
+							<a href="" class="sel_tickets-close"></a>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -415,6 +595,108 @@
 			</div>
 		</div>
 
+		<div id="loto-1" class="popup popup-loto">
+			<a href="" class="close"></a>
+			<div class="popup-loto-date">Тираж №310 &#160;&#160;&#160; Завтра, в 9:15</div>
+			<div class="loto-raffled"><span>2</span>Уже разыграно</div>
+			<div class="clearfix"></div>
+			<h2>Путешествие на выбор!</h2>
+			<p>Любите морские курорты и отдых под пальмами? Обожаете увлекательные прогулки по интересным городам? Предпочитаете активный отдых в горах, спускаясь с вершин на лыжах или сноуборде? Выиграйте этот шикарный приз и выберите себе путешествие по вкусу! Денежный эквивалент Путешествия равен 100 000 руб.</p>
+			<div class="popup-loto-sl">
+				<ul>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div id="loto-2" class="popup popup-loto">
+			<a href="" class="close"></a>
+			<div class="popup-loto-date">Тираж №310 &#160;&#160;&#160; Завтра, в 9:15</div>
+			<div class="loto-raffled"><span>2</span>Уже разыграно</div>
+			<div class="clearfix"></div>
+			<h2>Путешествие на выбор!</h2>
+			<p>Любите морские курорты и отдых под пальмами? Обожаете увлекательные прогулки по интересным городам? Предпочитаете активный отдых в горах, спускаясь с вершин на лыжах или сноуборде? Выиграйте этот шикарный приз и выберите себе путешествие по вкусу! Денежный эквивалент Путешествия равен 100 000 руб.</p>
+			<div class="popup-loto-sl">
+				<ul>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div id="loto-3" class="popup popup-loto">
+			<a href="" class="close"></a>
+			<div class="popup-loto-date">Тираж №310 &#160;&#160;&#160; Завтра, в 9:15</div>
+			<div class="loto-raffled"><span>2</span>Уже разыграно</div>
+			<div class="clearfix"></div>
+			<h2>Путешествие на выбор!</h2>
+			<p>Любите морские курорты и отдых под пальмами? Обожаете увлекательные прогулки по интересным городам? Предпочитаете активный отдых в горах, спускаясь с вершин на лыжах или сноуборде? Выиграйте этот шикарный приз и выберите себе путешествие по вкусу! Денежный эквивалент Путешествия равен 100 000 руб.</p>
+			<div class="popup-loto-sl">
+				<ul>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div id="loto-4" class="popup popup-loto">
+			<a href="" class="close"></a>
+			<div class="popup-loto-date">Тираж №310 &#160;&#160;&#160; Завтра, в 9:15</div>
+			<div class="loto-raffled"><span>2</span>Уже разыграно</div>
+			<div class="clearfix"></div>
+			<h2>Путешествие на выбор!</h2>
+			<p>Любите морские курорты и отдых под пальмами? Обожаете увлекательные прогулки по интересным городам? Предпочитаете активный отдых в горах, спускаясь с вершин на лыжах или сноуборде? Выиграйте этот шикарный приз и выберите себе путешествие по вкусу! Денежный эквивалент Путешествия равен 100 000 руб.</p>
+			<div class="popup-loto-sl">
+				<ul>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div id="loto-5" class="popup popup-loto">
+			<a href="" class="close"></a>
+			<div class="popup-loto-date">Тираж №310 &#160;&#160;&#160; Завтра, в 9:15</div>
+			<div class="loto-raffled"><span>2</span>Уже разыграно</div>
+			<div class="clearfix"></div>
+			<h2>Путешествие на выбор!</h2>
+			<p>Любите морские курорты и отдых под пальмами? Обожаете увлекательные прогулки по интересным городам? Предпочитаете активный отдых в горах, спускаясь с вершин на лыжах или сноуборде? Выиграйте этот шикарный приз и выберите себе путешествие по вкусу! Денежный эквивалент Путешествия равен 100 000 руб.</p>
+			<div class="popup-loto-sl">
+				<ul>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div id="loto-6" class="popup popup-loto">
+			<a href="" class="close"></a>
+			<div class="popup-loto-date">Тираж №310 &#160;&#160;&#160; Завтра, в 9:15</div>
+			<div class="loto-raffled"><span>2</span>Уже разыграно</div>
+			<div class="clearfix"></div>
+			<h2>Путешествие на выбор!</h2>
+			<p>Любите морские курорты и отдых под пальмами? Обожаете увлекательные прогулки по интересным городам? Предпочитаете активный отдых в горах, спускаясь с вершин на лыжах или сноуборде? Выиграйте этот шикарный приз и выберите себе путешествие по вкусу! Денежный эквивалент Путешествия равен 100 000 руб.</p>
+			<div class="popup-loto-sl">
+				<ul>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+					<li><img src="img/img.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
 		<div class="popup_bg"></div>
 		<!-- END POPUP -->
 	

@@ -15,7 +15,7 @@ $(document).ready(function() {
     $('.top-nav__item--submenu').bind( "click", function(){
         $(this).addClass('active');
         $('.top-nav__submenu').fadeIn(300);
-        $('.edition, .main-games').addClass('blur');
+        $('.edition, .main-games, .loto-cont, .inner-header, .crubs, .menu-hor, .profile, .kupon, .text, .loto_sto').addClass('blur');
         return false
     })
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
     $('.top-nav__submenu').mouseleave(function(){
         $('.top-nav__submenu').fadeOut(300);
         $('.top-nav__item--submenu').removeClass('active');
-        $('.edition, .main-games').removeClass('blur');
+        $('.edition, .main-games, .loto-cont, .inner-header, .crubs, .menu-hor, .profile, .kupon, .text, .loto_sto').removeClass('blur');
     });
 
 
@@ -435,7 +435,7 @@ $(document).ready(function() {
         return false;
     });
     $('.balance-form-close').click(function(){
-        $('.tab-balance').hide();
+        $('.tab-balance').slideUp();
         $('.balance-btn li').removeClass('active');
         return false;
     });
@@ -444,9 +444,9 @@ $(document).ready(function() {
     $('.balance-btn a').click(function(){
         $(this).parents('.balance-btn').find('li').removeClass('active');
         $(this).parent('li').addClass('active');
-        $('.tab-balance').hide();
+        $('.tab-balance').slideUp();
         var hisTag = $(this).attr('href');
-        $(hisTag).show();
+        $(hisTag).slideDown();
         return false;
     });
 
@@ -799,6 +799,198 @@ $(document).ready(function() {
         return false;
     });
 
+    $('.loto_sto-i .popup_open').click(function(){
+        var idSlick = $(this).attr('rel');
+        $(idSlick).find('.popup-loto-sl ul').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        })
+    });
+
+    $('.loto_sto-i').each(function(){
+        var SlMax = $(this).find('.loto_sto-sl-act').attr('max');
+        $(this).find(".loto_sto-sl-act").slider({
+          range: "min",
+          min: 0,
+          max: SlMax,
+          value: 0,
+          slide: function( event, ui ) {
+            $(this).parents('.loto_sto-i').find( ".loto_sto-act-namber span" ).text( ui.value );
+            $(this).parents('.loto_sto-i').find( ".ui-slider-handle" ).text( ui.value );
+
+            //-----------
+            var lotoName = $(this).parents('.loto_sto-i').find('h2 a').text();
+            var lotoId = $(this).parents('.loto_sto-i').find('.btn--pink').attr('rel');
+            var lotoNamber = $('.sel_tickets-sel').find('.sel_tickets-i').length;
+            var lotoZakaz = $(this).parents('.loto_sto-i').find('.loto_sto-act-namber span').text();
+            var lotoNamberId = $(this).parents('.loto_sto-i').index();
+            lotoNamber = ++lotoNamber + '.';
+            var blockNew = $('.sel_tickets-hide');
+            var lotoPrice = $(this).parents('.loto_sto-i').find('.price em').text() * lotoZakaz;
+
+            if($('.sel_tickets-sel').find('#' + lotoId).length) {
+                $('#' + lotoId).find('em').text(lotoZakaz);
+                $('#' + lotoId).attr('price', lotoPrice);
+            } else {
+                blockNew.find('i').text(lotoNamber);
+                blockNew.find('.sel_tickets-i').attr('id', lotoId);
+                blockNew.find('.sel_tickets-i').attr('price', lotoPrice);
+                blockNew.find('.sel_tickets-i').attr('namber', lotoNamberId)
+                blockNew.find('.sel_tickets-name span').text(lotoName);
+                blockNew.find('em').text(lotoZakaz);
+                var lotoNew = blockNew.html();
+                $('.sel_tickets-sel').append(lotoNew);
+            };
+            $('.sel_tickets-close').unbind('click', lotoClose);
+            $('.sel_tickets-close').bind('click', lotoClose);
+            var priceSum = 0;
+            $('.sel_tickets-sel').find('.sel_tickets-i').each(function(){
+                priceLoto = $(this).attr('price');
+                priceLoto = +priceLoto;
+                priceSum = priceSum + priceLoto;
+            });
+            $('.sel_tickets-total strong').text(priceSum);
+            //-----------
+            if(ui.value > 0) {
+                $(this).parents('.loto_sto-i').addClass('active')
+            } else {
+                $(this).parents('.loto_sto-i').removeClass('active');
+                $('#' + lotoId).find('.sel_tickets-close').click();
+            };
+
+          }
+        });
+        $(this).find(".loto_sto-act-namber span").text( $(this).find( ".loto_sto-sl-act" ).slider( "value" ) );
+        $(this).find(".ui-slider-handle").text( $(this).find( ".loto_sto-sl-act" ).slider( "value" ) );
+    });
+
+
+    // Добовление билетов
+    $('.loto_sto-i .btn--pink').click(function(){
+        sliderNext = $(this).parents('.loto_sto-i').find(".ui-slider-handle").text();
+        sliderNext = ++sliderNext;
+        $(this).parents('.loto_sto-i').find(".loto_sto-sl-act").slider({
+            value : sliderNext
+        });
+
+        $(this).parents('.loto_sto-i').find( ".loto_sto-act-namber span" ).text( sliderNext );
+        $(this).parents('.loto_sto-i').find( ".ui-slider-handle" ).text( sliderNext );
+
+        //-----------
+        var lotoName = $(this).parents('.loto_sto-i').find('h2 a').text();
+        var lotoId = $(this).parents('.loto_sto-i').find('.btn--pink').attr('rel');
+        var lotoNamber = $('.sel_tickets-sel').find('.sel_tickets-i').length;
+        var lotoZakaz = $(this).parents('.loto_sto-i').find('.loto_sto-act-namber span').text();
+        var lotoNamberId = $(this).parents('.loto_sto-i').index();
+        lotoNamber = ++lotoNamber + '.';
+        var blockNew = $('.sel_tickets-hide');
+        var lotoPrice = $(this).parents('.loto_sto-i').find('.price em').text() * lotoZakaz;
+
+        if($('.sel_tickets-sel').find('#' + lotoId).length) {
+            $('#' + lotoId).find('em').text(lotoZakaz);
+            $('#' + lotoId).attr('price', lotoPrice);
+        } else {
+            blockNew.find('i').text(lotoNamber);
+            blockNew.find('.sel_tickets-i').attr('id', lotoId);
+            blockNew.find('.sel_tickets-i').attr('price', lotoPrice);
+            blockNew.find('.sel_tickets-i').attr('namber', lotoNamberId)
+            blockNew.find('.sel_tickets-name span').text(lotoName);
+            blockNew.find('em').text(lotoZakaz);
+            var lotoNew = blockNew.html();
+            $('.sel_tickets-sel').append(lotoNew);
+        };
+        $('.sel_tickets-close').unbind('click', lotoClose);
+        $('.sel_tickets-close').bind('click', lotoClose);
+        var priceSum = 0;
+        $('.sel_tickets-sel').find('.sel_tickets-i').each(function(){
+            priceLoto = $(this).attr('price');
+            priceLoto = +priceLoto;
+            priceSum = priceSum + priceLoto;
+        });
+        $('.sel_tickets-total strong').text(priceSum);
+        $(this).parents('.loto_sto-i').addClass('active')
+
+        return false;
+    });
+    var lotoClose = function() {
+        $(this).parents('.sel_tickets-i').remove();
+        var lotoNewNamber = 0;
+        $('.sel_tickets-sel').find('.sel_tickets-i').each(function(){
+            lotoNewNamber = ++lotoNewNamber;
+            $(this).find('i').text(lotoNewNamber);
+        });
+        var priceSum = 0;
+        $('.sel_tickets-sel').find('.sel_tickets-i').each(function(){
+            priceLoto = $(this).attr('price');
+            priceLoto = +priceLoto;
+            priceSum = priceSum + priceLoto;
+        });
+        $('.sel_tickets-total strong').text(priceSum);
+        var namberClose = $(this).parents('.sel_tickets-i').attr('namber');
+        console.log(namberClose);
+        $('.loto_sto-list').find('.loto_sto-i').eq(namberClose).find(".loto_sto-sl-act").slider({
+            value : 0
+        });
+        $('.loto_sto-list').find('.loto_sto-i').eq(namberClose).removeClass('active');
+        $('.loto_sto-list').find('.loto_sto-i').eq(namberClose).find('.ui-slider-handle').text(0);
+        return false;
+    };
+    // Отправка данных о покупке лото
+    $('.sel_tickets-items .tirag-btn .btn-st').click(function(){
+        var arr = [];
+        var i = 0;
+        var priceTotal = $('.sel_tickets-total strong').text();
+        $('.sel_tickets-sel').find('.sel_tickets-i').each(function(){
+            lotoId = $(this).attr('id');
+            lotoBilet = $(this).find('em').text();
+            lotoPrice = $(this).attr('price');
+            arr[i] = 'Лото ID - ' + lotoId + '; Билетов - ' + lotoBilet + '; Цена - ' + lotoPrice;
+            i = ++i;
+        });
+        console.log(arr);
+        console.log('Общая сумма - ' + priceTotal);
+    });
+
+    $('.loto_sto-slider').each(function(){
+        var widthPolzun = 200;
+
+        var allTicket = $(this).attr('max');
+        var buyTicket = $(this).attr('price');
+
+        var proc = (buyTicket / allTicket) * 100;
+        var poz = Math.round((proc * widthPolzun) / 100);
+
+        var r,g,b;
+
+        if(proc < 38) {r=(199/38)*proc+56; g=(45/38)*proc+210; b=0;}
+        if(proc >= 38 && proc <= 62) {r=255; g=234; b=0;}
+        if(proc > 62) {r=-(27/38)*proc+5682/19; g=-(181/38)*proc+10057/19; b=(55/19)*proc-3410/19;}
+
+        r = Math.round(r);
+        g = Math.round(g);
+        b = Math.round(b);
+
+        $(this).find('span').css('background', 'rgb('+r+','+g+','+b+')');
+        $(this).parents('.loto_sto-i').find('.loto_sto-info').css('color', 'rgb('+r+','+g+','+b+')');
+        $(this).find('span').width(poz);
+    });
+
+    $('.balance-info-lnk a').click(function(){
+        $('.balance-refill').slideDown();
+        $('.balance-info').addClass('active');
+        return false;
+    });
+    $('.long-username a').click(function(){
+        $('.username-menu').slideDown();
+        $('.long-username-box').addClass('active');
+        return false;
+    });
+
+
+    
 
 
 });
@@ -987,6 +1179,18 @@ $(document).mouseup(function(e){
     var container2 = $(".bell, .popup-message"); 
         if (!container2.is(e.target) && container2.has(e.target).length === 0){
         $('.popup-message').fadeOut();
+    };
+
+    var container3 = $(".balance-info-lnk a, .balance-info"); 
+        if (!container3.is(e.target) && container3.has(e.target).length === 0){
+        $('.balance-refill').slideUp();
+        $('.balance-info').removeClass('active');
+    };
+
+    var container4 = $(".long-username a, .long-username-box"); 
+        if (!container4.is(e.target) && container4.has(e.target).length === 0){
+        $('.username-menu').slideUp();
+        $('.long-username-box').removeClass('active');
     };
 
 });
