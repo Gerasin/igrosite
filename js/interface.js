@@ -872,6 +872,8 @@ $(document).ready(function() {
     $('.loto_sto-i .btn--pink').click(function(){
         sliderNext = $(this).parents('.loto_sto-i').find(".ui-slider-handle").text();
         sliderNext = ++sliderNext;
+        var sliderMax = $(this).parents('.loto_sto-i').find('.loto_sto-sl-act').attr('max');
+        if(sliderNext >= sliderMax) {sliderNext = sliderMax};
         $(this).parents('.loto_sto-i').find(".loto_sto-sl-act").slider({
             value : sliderNext
         });
